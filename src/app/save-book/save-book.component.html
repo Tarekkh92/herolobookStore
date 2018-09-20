@@ -1,0 +1,56 @@
+<mat-card-header>
+    <mat-toolbar class="toolbar">
+      <mat-card-title>Book Information</mat-card-title>
+      <span class="toolbar-spacer"></span>
+      <mat-icon (click)="onNoClick()">cancel</mat-icon>
+    </mat-toolbar>
+  </mat-card-header>
+  <mat-card-content>
+    <div class="container-fluid">
+      <form [formGroup]="bookForm" (submit)="onSubmit()">
+           
+        <div class="form-group">
+                
+          <div class="row">
+            <div class="col-md-12">
+                        <label>Author Name</label>
+                        <input matInput type="text" pattern="[a-zA-Z ]*" formControlName="authorName" class="form-control" placeholder="alphabet only">  
+                        <!-- <span [hidden]="authorName.pristine || authorName.valid"> Book Title is required</span>   -->
+            </div> 
+
+           
+          </div>
+          <br/>
+          <div class="row">
+              <!-- check date -->
+            <div class="col-md-12">
+              <label>Published Date</label>
+              <input type="Date" formControlName="publishedDate" class="form-control" >
+            </div>
+           
+          </div>
+          <div class="row">
+                <div class="col-md-12">
+                        <label>Book Title</label>
+                        <input type="text"  pattern="[a-zA-Z ]*" formControlName="bookTitle" class="form-control" placeholder="alphabet only">
+                      </div>
+          </div>
+  <br/><br/><br/>
+          <div class="row">
+            <div class="col-xs-12 ">
+            <button type="submit" [disabled]="bookForm.invalid" class="btn btn-success">
+              <mat-icon>save</mat-icon>
+            </button>
+            </div>
+            <span class="toolbar-spacer"></span>
+            <div class="col-xs-12">
+                    <button  type="submit"  class="btn btn-success">
+                      <mat-icon>cancel</mat-icon>
+                    </button>
+            </div>
+          </div>
+        </div>
+        
+      </form>
+    </div>
+  </mat-card-content>

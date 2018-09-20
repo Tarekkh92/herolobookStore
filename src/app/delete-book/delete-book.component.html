@@ -1,0 +1,42 @@
+<!-- 
+<mat-card-header>
+    <mat-toolbar class="toolbar">
+      <mat-card-title>Are you Sure ? </mat-card-title>
+      <span class="toolbar-spacer"></span>
+     
+    </mat-toolbar>
+  </mat-card-header>
+  <mat-card-content>
+    <div class="container">
+      <form [formGroup]="bookForm" (submit)="onSubmit()">
+        <div class="form-group">
+        
+          <div class="row">
+            <div class="col-md-6">
+            <button type="submit" class="btn btn-success">
+              <mat-icon>Ok</mat-icon>
+            </button>
+           
+            </div>
+            <button class="col-md-6">
+                    <mat-icon (click)="onNoClick()">Cancel</mat-icon>    
+            </button>
+          </div>
+        </div>
+  
+      </form>
+    </div>
+  </mat-card-content> -->
+  <form [formGroup]="bookForm" (submit)="onSubmit()" >
+        <label>Are You Sure??</label>
+        <br/><br/><br/>
+        <mat-card-content>
+            <button type="submit" class="btn btn-danger" >Ok</button>
+            &nbsp;
+            <button type="button" class="btn btn-default" (click)="onNoClick()">Cancel</button>   
+        </mat-card-content>
+        <mat-card-content >
+                
+        </mat-card-content>
+
+</form>

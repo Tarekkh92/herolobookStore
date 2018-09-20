@@ -1,0 +1,68 @@
+<mat-card-header>
+        <mat-toolbar class="toolbar">
+          <mat-card-title>Edit Book Information</mat-card-title>
+          <span class="toolbar-spacer"></span>
+          <mat-icon (click)="onNoClick()">cancel</mat-icon>
+        </mat-toolbar>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="container">
+          <form [formGroup]="bookForm" (submit)="onSubmit()">
+               
+            <div class="form-group">
+                    
+              <div class="row">
+                <div class="col-md-12">
+                            <label>Author Name</label>
+                            <input matInput type="text"  formControlName="authorName" class="form-control" placeholder="Author name.." >
+    
+                </div>
+               
+              </div>
+              <br/>
+              <div class="row">
+                  
+                <div class="col-md-12">
+                  <label>Published Date</label>
+                  <input type="Date" formControlName="publishedDate" class="form-control" >
+                </div>
+               
+              </div>
+              <div class="row">
+                    <div class="col-md-12">
+                            <label>Book Title</label>
+                            <input type="text"   formControlName="bookTitle" class="form-control" placeholder="Book Title..">
+                          </div>
+              </div>
+      <br/><br/><br/>
+              <!-- <div class="row">
+                <div class="col-md-6">
+                <button type="submit" [disabled]="bookForm.invalid" class="btn btn-success">
+                  <mat-icon>save</mat-icon>
+                </button>
+                </div>
+                <span class="toolbar-spacer"></span>
+                <div class="col-md-6">
+                        <button  type="submit"  class="btn btn-success">
+                          <mat-icon>cancel</mat-icon>
+                        </button>
+                </div>
+              </div> -->
+              <div class="row">
+                <div class="col-xs-12 ">
+                <button type="submit" [disabled]="bookForm.invalid" class="btn btn-success">
+                  <mat-icon>save</mat-icon>
+                </button>
+                </div>
+                <span class="toolbar-spacer"></span>
+                <div class="col-xs-12">
+                        <button  type="submit"  class="btn btn-success">
+                          <mat-icon>cancel</mat-icon>
+                        </button>
+                </div>
+              </div>
+            </div>
+            
+          </form>
+        </div>
+      </mat-card-content>
