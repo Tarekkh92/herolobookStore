@@ -12,6 +12,7 @@ import { EditBookComponent } from '../edit-book/edit-book.component';
 export class BookListComponent implements OnInit {
 
     isPopupOpened = true;
+    searchTerm:string;
 
     constructor(private dialog?: MatDialog,private _contactService?: booksService) { }
   
