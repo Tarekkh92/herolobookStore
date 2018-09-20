@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
-import { ContactComponent } from './contact/contact.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatCardModule, MatDialogModule, MatToolbarModule, MatIconModule } from '@angular/material';
 // import { ContactService } from './service/contact.service';
